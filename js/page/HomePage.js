@@ -15,6 +15,7 @@ import MyPage from './MyPage'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Entypo from 'react-native-vector-icons/Entypo'
+import NavigationUtil from '../navigator/NavigationUtil'
 
 type Props = {}
 export default class HomePage extends Component <Props> {
@@ -72,6 +73,8 @@ export default class HomePage extends Component <Props> {
     }
 
     render () {
+        // 将最外层的 navigation 保存在 NavigationUtil.navigation 中，就可以在子路由中控制跳转
+        NavigationUtil.navigation = this.props.navigation
         const Tab = this._tabNavigator()
         return <Tab/>
     }
