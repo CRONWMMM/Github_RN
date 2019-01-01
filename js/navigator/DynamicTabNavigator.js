@@ -17,7 +17,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Entypo from 'react-native-vector-icons/Entypo'
 
-const TABS = { // 路由页面
+const TABS = { // 底部导航路由
     PopularPage: {
         screen: PopularPage,
         navigationOptions: {
@@ -89,6 +89,7 @@ export default class DynamicTabNavigator extends Component <Props> {
     }
 }
 
+// 用于覆盖标签栏的组件
 class TabBarComponent extends Component {
     constructor (props) {
         super(props)
